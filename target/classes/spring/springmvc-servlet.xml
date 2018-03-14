@@ -13,10 +13,10 @@
            http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">  
         
     <!-- 启动时扫描所有的controller -->
-    <context:component-scan base-package="cherishIdea.*.controller" />
-    <context:component-scan base-package="cherishIdea.*.service" />
-    <context:component-scan base-package="cherishIdea.*.service.impl" />
-    <!-- <context:component-scan base-package="cherishIdea.*.persistent" /> -->
+    <context:component-scan base-package="onlineExam.*.controller" />
+    <context:component-scan base-package="onlineExam.*.service" />
+    <context:component-scan base-package="onlineExam.*.service.impl" />
+    <!-- <context:component-scan base-package="onlineExam.*.persistent" /> -->
     
     <!--  主要作用于@Controller，激活该模式，下面是一种简写形式，完全可以手动配置替代这种简写形式，
                 它会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter，

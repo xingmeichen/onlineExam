@@ -13,8 +13,8 @@
                         http://mybatis.org/schema/mybatis-spring
                         http://mybatis.org/schema/mybatis-spring.xsd">  
     <!-- 自动扫描 -->  
-    <!-- <scan base-package="cherishIdea.*.persistent" /> --> 
-    <!-- <mybatis:scan base-package="cherishIdea.*.persistent" />   --> 
+    <!-- <scan base-package="onlineExam.*.persistent" /> --> 
+    <!-- <mybatis:scan base-package="onlineExam.*.persistent" />   --> 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <!-- <property name="driverClass" value="${jdbc.driver}" />
         <property name="jdbcUrl" value="${jdbc.url}" />
@@ -47,7 +47,7 @@
   
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->  
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="cherishIdea.*.persistent" /> 
+        <property name="basePackage" value="onlineExam.*.persistent" /> 
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
     </bean>  
   
@@ -57,5 +57,5 @@
         <property name="dataSource" ref="dataSource" />  
     </bean> 
     
-    <context:component-scan base-package="cherishIdea.*.service.impl" /> 
+    <context:component-scan base-package="onlineExam.*.service.impl" /> 
 </beans>

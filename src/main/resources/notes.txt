@@ -1,0 +1,5 @@
+一、访问地址：http://127.0.0.1:8123/UED/onlineExam/view/login.html
+即：http://ip:端口号/前端文件的所在路径 （注意该路径是tomcat目录中 的webapps目录下的目录）
+比如说原本要访问的文件的完整目录是
+D:\Program Files\apache-tomcat-8.0.33\webapps\UED\onlineExam\view\login.html
+则访问地址如上

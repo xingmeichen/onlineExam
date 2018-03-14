@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
 encoding//src/main/java/onlineExam/controller/LoginController.java=UTF-8
 encoding//src/main/java/onlineExam/controller/admit/AddCourseController.java=UTF-8
 encoding//src/main/java/onlineExam/controller/admit/EditCourseController.java=UTF-8
@@ -9,4 +10,7 @@ encoding//src/main/java/onlineExam/domain/po/GradeView.java=UTF-8
 encoding//src/main/java/onlineExam/domain/po/Paper.java=UTF-8
 encoding//src/main/java/onlineExam/domain/po/Problem.java=UTF-8
 encoding//src/main/java/onlineExam/domain/po/ResultView.java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8
 encoding/<project>=UTF-8

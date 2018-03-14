@@ -1,25 +1,44 @@
 package onlineExam.service.impl;
 
+import javax.annotation.Resource;
+
 import onlineExam.domain.po.Admin;
 import onlineExam.domain.po.Student;
 import onlineExam.domain.po.Teacher;
 import onlineExam.persistent.AdminMapper;
 import onlineExam.persistent.StudentMapper;
 import onlineExam.persistent.TeacherMapper;
+import onlineExam.service.ILoginService;
 
-public class LoginServiceImpl {
+public class LoginServiceImpl implements ILoginService{
 	
-	StudentMapper sdao = new StudentMapper();
-	TeacherMapper tdao = new TeacherMapper();
-	AdminMapper adao = new AdminMapper();
+	
+	/**
+	 * teacherMapper *
+	 */
+	@Resource
+	private TeacherMapper teacherMapper;
+	
+	/**
+	 * studentMapper *
+	 */
+	@Resource
+	private StudentMapper studentMapper;
+	
+	/**
+	 * adminMapper *
+	 */
+	@Resource
+	private AdminMapper adminMapper;
 	
 	/**
 	 * 学生登录系统
 	 * */
+	@Override
 	public Student loginStudent(String userId,String userPassword){
 		
 		Student student = new Student();		
-		student = sdao.getOneStudent(userId);
+		student = studentMapper.getOneStudent(userId);
 		if(userId.equals(student.getStudentId()) && userPassword.equals(student.getStudentPassword()))
 			return student;		
 		else return null;
@@ -28,10 +47,11 @@ public class LoginServiceImpl {
 	/**
 	 * 教师登录系统
 	 * */
+	@Override
 	public Teacher loginTeacher(String userId, String userPassword) {
 
 		Teacher teacher = new Teacher();
-		teacher = tdao.getOneTeacher(userId);
+		teacher = teacherMapper.getOneTeacher(userId);
 		/*用户名和密码一致*/
 		if (userId.equals(teacher.getTeacherId()) 
 				&& userPassword.equals(teacher.getTeacherPassword())) {
@@ -46,7 +66,7 @@ public class LoginServiceImpl {
 	public Admin loginAdmin(String userId, String userPassword) {
 
 		Admin admin = new Admin();
-		admin = adao.getOneAdmin(userId);
+		admin = adminMapper.getOneAdmin(userId);
         /*用户名和密码一致*/
 		if (userId.equals(admin.getAdminId())
 				&& userPassword.equals(admin.getAdminPassword())) {

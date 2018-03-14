@@ -1,6 +1,13 @@
 package onlineExam.memo;
 
+import javax.annotation.Resource;
+
+import onlineExam.service.ITeacherService;
+
 public class Memo {
+	
+	@Resource
+	public ITeacherService teacherServiceImpl;
 	
 	/**
 	 * 正确的电话号码
@@ -12,6 +19,8 @@ public class Memo {
 			System.out.println("正确的电话号码");
 		else
 			System.out.println("错误的电话号码");
+		System.out.println("----------------");
+		System.out.println(teacherServiceImpl == null);
 	
 	}
 	
@@ -19,11 +28,6 @@ public class Memo {
 		
 		Memo memo = new Memo();
 		memo.ifPhone();
-		String m = "";
-		m = "hello ";
-		m = m+"\n";
-		m = m+"world";
-		System.out.println(m);
+		System.out.println("*************");
 	}
-
 }
